@@ -1,0 +1,52 @@
+/* Variáveis */
+$green: #10b981;
+
+/* Mixins */
+@mixin responsive($size: "") {
+  @if ($size == "cell") {
+    @media screen and (min-width: 320px) and (max-width: 590px) {
+      @content;
+    }
+  } @else if($size == "tablet") {
+    @media screen and (min-width: 591px) and (max-width: 1279px) {
+      @content;
+    }
+  } @else {
+    // Tanto tablet quanto celular
+    @media screen and (min-width: 320px) and (max-width: 1279px) {
+      @content;
+    }
+  }
+}
+@mixin flex($sentido: "") {
+  @if ($sentido == "x") {
+    display: flex;
+    justify-content: center;
+  } @else if($sentido == "y") {
+    display: flex;
+    align-items: center;
+  } @else {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* Funções */
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+@mixin btn {
+  margin-top: 2rem;
+  background-color: #15803d;
+  padding: 10px 15px;
+  border-radius: 12px;
+  color: #f2f2f2;
+  margin-left: 1rem;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background-color: #16a34a;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}

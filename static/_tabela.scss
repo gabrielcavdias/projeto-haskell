@@ -1,0 +1,40 @@
+.tabela {
+  max-width: 600px;
+  @include flex();
+  flex-direction: column;
+  h1 {
+    text-align: center;
+  }
+  .innerContainer button {
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    @include btn;
+    font-size: 1.5rem;
+    padding: 12px 20px;
+  }
+  .tableContainer {
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  table {
+    border: 0;
+    border-collapse: collapse;
+    th,
+    td {
+      padding: 10px 25px;
+    }
+    thead {
+      background-color: #166534;
+      color: #f2f2f2;
+      font-size: 1.2rem;
+    }
+    tbody {
+      background-color: #a7f3d0;
+      td {
+        text-align: center;
+      }
+    }
+  }
+}

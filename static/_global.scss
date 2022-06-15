@@ -1,0 +1,77 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Viga&display=swap");
+//
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+button {
+  background-color: transparent;
+  color: inherit;
+}
+/* Estilos Globais */
+:root {
+  @include responsive() {
+    font-size: 13px;
+  }
+}
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+//
+/* Classes utilitárias */
+.container {
+  max-width: 1280px;
+  margin-top: 1rem;
+  margin-inline: auto;
+}
+.text-detail {
+  font-size: 12px;
+  &--red {
+    display: block;
+    margin-block: 1rem;
+    text-align: center;
+    color: red;
+    a {
+      color: darken($green, 5);
+      text-decoration: underline;
+    }
+  }
+}
+h1,
+h2,
+h3 {
+  font-family: Viga, sans-serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-block: 1rem;
+}
+.flex {
+  display: flex;
+  gap: 2rem;
+}

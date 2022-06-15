@@ -1,0 +1,26 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  label {
+    font-size: 1.2rem;
+    &:first-of-type {
+      margin-bottom: 5px;
+    }
+    &:not(:first-of-type) {
+      margin-block: 5px;
+    }
+  }
+  input {
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 8px 12px;
+  }
+  button {
+    @include btn;
+  }
+}
